@@ -34,7 +34,7 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days'],
     config['preauthorized']
 )
-model = tf.keras.models.load_model(r'models\raw-test1.h5', compile = False)
+model = tf.keras.models.load_model('models/raw-test1.h5', compile = False)
 # Define a function to make predictions on the input image
 def predict_glaucoma(image):
     # Preprocess the image (resize, normalize, etc. based on your model's requirements)
@@ -73,7 +73,7 @@ def main():
         df.index.name = 'Models'
         st.table(df)
         st.markdown("**Confusion Matrix of best model:**")
-        st.image("models\download (4).png", caption='Confusion Matrix', use_column_width=True)
+        st.image("models/download (4).png", caption='Confusion Matrix', use_column_width=True)
         
         # Add a header
         st.header("Upload an Image")
