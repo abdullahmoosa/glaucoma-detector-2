@@ -1,0 +1,13 @@
+credentials:
+  usernames:
+    nsu499:
+      email: Krysenjo2266@gmail.com
+      name: Obantika
+      password: $2b$12$RSdFr4uhgm6Sr029U5aR5.0ZYFdhmhGeZYjxu5mu3MnCMeYQb5tuK
+cookie:
+  expiry_days: 0
+  key: some_signature_key # Must be string
+  name: some_cookie_name
+preauthorized:
+  emails:
+  - Krysenjo2266@gmail.com
