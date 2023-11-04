@@ -74,7 +74,7 @@ def main():
         st.table(df)
         st.markdown("**Glaucoma Detection :**")
         st.write("Glaucoma is a disease that damages your eye's optic nerve. It usually happens when fluid builds up in the front part of your eye. ")
-        # st.image("models/Glaucoma-1-1.jpg")
+        st.image("models/Glaucoma-1-1.jpg")
         st.write("To aid in the detection of this disease, we can use deep learning for faster and earlier identification of Glaucoma.")
         st.markdown("**Confusion Matrix of best model :**")
         
