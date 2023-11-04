@@ -64,19 +64,25 @@ def main():
         st.title("Glaucoma Detector")
         st.markdown("**Accuracies of Various Models :**")
         data = {'Models': ['CNN', 'Resnet50', 'MobileNetv2','Vgg16','InceptionV3'],
-            'Accuracy': [68.702, 50.382, 68.103,58.779,72.591],
-            'f1 score' : [70.021, 48.921, 71.087,52.661,72.471],
-            'precision score' : [68.891, 52.032, 69.041,67.153,72.591],
-            'recall score' : [68.802, 51.021, 70.023,58.775,72.553]}
+            'Accuracy': [68.702, 62.382, 68.103,58.779,72.591],
+            'f1 score' : [70.021, 62.981, 71.087,52.661,72.471],
+            'precision score' : [68.891, 63.459, 69.041,67.153,72.591],
+            'recall score' : [68.802, 61.781, 70.023,58.775,72.553]}
         df = pd.DataFrame(data)
         df.set_index('Models', inplace=True)
         df.index.name = 'Models'
         st.table(df)
-        st.markdown("**Confusion Matrix of best model:**")
+        st.markdown("**Glaucoma Detection :**")
+        st.write("Glaucoma is a disease that damages your eye's optic nerve. It usually happens when fluid builds up in the front part of your eye. ")
+        st.image("models\Glaucoma-1-1.jpg")
+        st.write("To aid in the detection of this disease, we can use deep learning for faster and earlier identification of Glaucoma.")
+        st.markdown("**Confusion Matrix of best model :**")
+        
+
         st.image("models/download (4).png", caption='Confusion Matrix', use_column_width=True)
         
         # Add a header
-        st.header("Upload an Image")
+        st.subheader("Please upload fundus image of eye", divider = "gray")
         
         uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
         
